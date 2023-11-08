@@ -2,14 +2,27 @@
 <html>
 <head>
     <title>Create Opportunity</title>
+    <style>
+        .container {
+            display: flex; 
+        }
+        
+        .form-container {
+            margin-right: 20px; 
+        }        
+    </style>
 </head>
 <body>
-    <h1>Create New Opportunity</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" name="submit">Submit</button>
-        <button type="submit" name="rewrite">Rewrite</button>
-    </form>
+    <div class="container">
+        <div class="form-container">
+            <h1>Create New Opportunity</h1>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit" name="submit">Submit</button>
+                <button type="submit" name="rewrite">Rewrite</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

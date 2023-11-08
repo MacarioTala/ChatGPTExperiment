@@ -26,6 +26,7 @@ def opportunity_create_view(request):
             elif 'rewrite' in request.POST:
                 opportunity=form.instance
                 opportunity.description=opportunity.rewrite_me()
+                opportunity.tags=opportunity.get_tags()
                 opportunity.save()
                 print(opportunity)
                 form = OpportunityForm(instance=opportunity)

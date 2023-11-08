@@ -6,5 +6,6 @@ class OpportunityForm(forms.ModelForm):
         model = Opportunity
         fields = [
             'name',
-            'description'
+            'description',
+            'tags',
         ]
